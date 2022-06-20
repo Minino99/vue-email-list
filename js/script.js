@@ -3,24 +3,23 @@ const app = new Vue({
 
   data: {
 
-    mailsArray: [],
+    mailsArray : []
 
   },
 
   methods: {
 
     generateMails() {
+      this.mailsArray = [];
       for (let i = 0; i < 10; i++) {
         axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
           .then(function (axiosResp) {
-            let mail = axiosResp.data.response;
-            this.mailsArray.push(mail);
+            this.mailsArray.push(axiosResp.data.response);
           });
-        console.log(this.mailsArray);
       }
 
-    },
-  },
+    }
+  }
 
 
 });

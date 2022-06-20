@@ -9,10 +9,8 @@
  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css'
   integrity='sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg=='
   crossorigin='anonymous' />
- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
- <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js'
-  integrity='sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=='
-  crossorigin='anonymous'></script>
+ <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 </head>
 
 <body>
@@ -22,9 +20,9 @@
    <button type="button" class="btn btn-warning btn-lg m-5" @click="generateMails()">Genera 10 mail</button>
 
    <ul v-if="mailsArray.length===10">
-    <li v-for="randomMail in mailsArray">{{ randomMail }}</li>
+    <li class="p-3" v-for="randomMail in mailsArray">{{ randomMail }}</li>
    </ul>
-   <div v-else-if="mailsArray.length>0 && mailsArray.length<10">genero le mails</div>
+   <div v-else-if="mailsArray.length > 0 && mailsArray.length < 10">genero le mails</div>
 
   </div>
  </div>
